@@ -9,7 +9,7 @@ import { CiLinkedin } from "react-icons/ci";
 
 export function Intro() {
   return (
-    <section className=" mb-28 max-w-[50rem] text-center sm:mb-0">
+    <section id="home" className=" mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -80,13 +80,13 @@ export function Intro() {
           Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
         </a>
         <a
-          href=""
+          href="https://www.linkedin.com/in/galya-matviienko-817662254/" target="_blank"
           className="bg-white  text-blue-700 font-bold rounded-full text-[1.35rem] p-4 flex items-center gap-2"
         >
           <BsLinkedin />
         </a>
         <a
-          href=""
+          href="https://github.com/GALKA03" target="_blank"
           className="bg-white  text-black font-bold rounded-full text-[1.35rem] p-4 flex items-center gap-2"
         >
           <BsGithub />
