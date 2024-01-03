@@ -1,5 +1,5 @@
 import { Divider } from "@/components/section-divider";
-import{About, Intro, Projects} from "@/components/index"
+import{About, Intro, Projects, Skills, Experience} from "@/components/index"
 
 
 export default function Home() {
@@ -8,7 +8,9 @@ export default function Home() {
       <Intro />
       <Divider />
       <About />
-      <Projects/>
+      {/* <Projects /> */}
+      <Skills />
+      <Experience/>
     </main>
   )
 }

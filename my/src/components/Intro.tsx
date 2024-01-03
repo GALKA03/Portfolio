@@ -5,11 +5,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { CiLinkedin } from "react-icons/ci";
+import { useInViewHook } from "@/lib/hooks";
 
 export function Intro() {
+  const { ref } = useInViewHook("Home");
+
   return (
-    <section id="home" className=" mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section
+      ref={ref}
+      id="home"
+      className=" mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -60,11 +66,11 @@ export function Intro() {
       <motion.div
         className="flex flex-col justify-center gap-2 items-center px-4 text-lg sm:flex-row"
         initial={{ opacity: 0, y: 200 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-              delay: 0.1,
-              duration: 0.7,
-            }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+          duration: 0.7,
+        }}
       >
         <Link
           href="#contact"
@@ -77,16 +83,19 @@ export function Intro() {
           href=""
           className="bg-[#f4353564] border-2 border-white text-white font-bold rounded-full px-7 py-3 flex justify-center items-center gap-2  hover:scale-110 active:scale-105  focus:scale-110 transition "
         >
-          Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
+          Download CV{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
         <a
-          href="https://www.linkedin.com/in/galya-matviienko-817662254/" target="_blank"
+          href="https://www.linkedin.com/in/galya-matviienko-817662254/"
+          target="_blank"
           className="bg-white  text-blue-700 font-bold rounded-full text-[1.35rem] p-4 flex items-center gap-2"
         >
           <BsLinkedin />
         </a>
         <a
-          href="https://github.com/GALKA03" target="_blank"
+          href="https://github.com/GALKA03"
+          target="_blank"
           className="bg-white  text-black font-bold rounded-full text-[1.35rem] p-4 flex items-center gap-2"
         >
           <BsGithub />

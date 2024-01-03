@@ -45,6 +45,7 @@ export const experiencesData = [
   },
   {
     title: "Front-End Developer",
+   location: "Online",
     description: "freelance",
     date: "2022 - present",
 
@@ -52,6 +53,7 @@ export const experiencesData = [
   },
   {
     title: "Full-Stack Developer",
+    location: "Online",
     description: "freelance",
     date: "2022 - present",
     icon: React.createElement(FaReact),
